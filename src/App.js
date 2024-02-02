@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -15,6 +15,7 @@ import Download from './pages/howtodownload';
 function App() {
   return (
     <div className="App">
+      <h1>hello</h1>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
