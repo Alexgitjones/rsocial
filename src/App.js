@@ -15,6 +15,7 @@ import Download from './pages/howtodownload';
 function App() {
   return (
     <div className="App">
+      <h1>check one</h1>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
