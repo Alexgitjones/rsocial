@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -14,28 +20,28 @@ export default function Footer() {
                     <div className="col-2 r2-block-2">
                         <h1 className="hdng">COMPANY</h1>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><Link to="/about-us">About Us</Link></li>
+                            <li><Link to="/single-services">Our Services</Link></li>
+                            <li><Link to="/pricing-page">Pricing</Link></li>
+                            <li><Link to="/contact-us">Contact Us</Link></li>
                         </ul>
                     </div>
 
                     <div className="col-2 r3-block-3">
                         <h1 className="hdng">ACCOUNT</h1>
                         <ul>
-                            <li><a href="#">Account Settings</a></li>
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Sign Up</a></li>
+                            <li><Link to="/legal-terms">Legal Terms</Link></li>
+                            <li><Link to="/sign-in">Sign in</Link></li>
+                            <li><Link to="/sign-up">Sign Up</Link></li>
                         </ul>
                     </div>
 
                     <div className="col-2 r4-block-4">
                         <h1 className="hdng">MORE</h1>
                         <ul>
-                            <li><a href="#">Become an Affiliate</a></li>
-                            <li><a href="#">Become a Creator</a></li>
-                            <li><a href="#">Custom Brand Videos</a></li>
+                            <li><Link to="/how-to-download">How to download</Link></li>
+                            <li><Link to="/become-a-creator">Become a Creator</Link></li>
+                            <li><Link to="/for-brands">For Brands</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -52,9 +58,9 @@ export default function Footer() {
                     </div>
                     <div className="col-6 r3-block-2 text-end">
                         <ul>
-                            <li><a href="#">Privacy policy</a></li>
-                            <li><a href="#">Licence terms</a></li>
-                            <li><a href="#">Terms of service</a></li>
+                            <li><Link to="/privacy-policy">Privacy policy</Link></li>
+                            <li><Link to="/license-terms">Licence terms</Link></li>
+                            <li><Link to="/single-services">Services</Link></li>
                         </ul>
                     </div>
                 </div>

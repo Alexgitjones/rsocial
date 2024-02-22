@@ -2,10 +2,10 @@ import React from 'react'
 import Header from '../component/header'
 import Footer from '../component/footer'
 
-export default function Aboutus() {
+export default function Aboutus({user}) {
   return (
     <div>
-        <Header />
+        <Header user={user} />
         <div className="inner-pages-banner">
             <div className="container justify-content-center d-flex flex-column align-items-center">
                 <div className="row w-100 text-center">

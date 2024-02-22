@@ -2,44 +2,37 @@ import React, { useState , useEffect } from 'react';
 import Header from '../component/header'
 import Footer from '../component/footer'
 import axios from 'axios';
+import { redirect } from "react-router-dom";
+import {ClipLoader } from 'react-spinners'
 
-export default function Signin() {
+export default function Signin({login}) {
 
-    // useEffect(() => {
-    //     const storedUser = localStorage.getItem('user');
-    //     if (storedUser) {
-    //         setUser(JSON.parse(storedUser));
-    //     }
-    // }, []);
 
     const [email, setEmail] = useState('');
+    const [loader, setloader] = useState(false);
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
+    const geturl = process.env.REACT_APP_SERVER_URL;
+    // console.log(process.env.REACT_APP_SERVER_URL)
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
-        const response = await axios.post('http://localhost:5000/login', {
+        setloader(true)
+        const response = await axios.post(geturl+'/login', {
             email,
             password,
-          });
+        });
         if(response.data.error){
             setErrorMessage(response.data.error);
         }else{
-            setSuccessMessage(response.data.msg);
-            setErrorMessage('');
+            login(response.data.msg)
         }
-        // // Validate password and confirm password match
-        // if (password !== confirmPassword) {
-        //     setErrorMessage('Passwords do not match');
-        //     return;
-        //   }
-    
+        setloader(false)
+
       };
   return (
     <div>
-        <Header />
-        
+    <Header />
     <div className="inner-pages-banner">
         <div className="container justify-content-center d-flex flex-column align-items-center">
             <div className="row w-100 text-center">
@@ -58,7 +51,7 @@ export default function Signin() {
                     <div className="row w-100 text-center">
                         <div className="col fb-block-1">
                             <a href="#"><button className="google-login-btn">
-                                <img src="./assets/images/sign_in_page/google-logo.svg" alt="Google Logo"/> 
+                                <img src="/assets/images/sign_in_page/google-logo.svg" alt="Google Logo"/> 
                                 Continue with Google</button></a>
                         </div>
                     </div>
@@ -75,7 +68,7 @@ export default function Signin() {
                                 </div>
                                 {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
                                 {successMessage && <div className="alert alert-success">{successMessage}</div>}
-                                <button type="submit" className="btn">Let’s get Started</button>
+                                <button type="submit" className="btn">Let’s get Started <ClipLoader loading={loader} size="40" /></button>
                               </form>
                               <div className="su-fp-btns">
                                 <a href="#"><h6 className="sign-up-btn">Need an account? Sign up</h6></a>
@@ -88,9 +81,7 @@ export default function Signin() {
             <hr className="divider" />
         </div>
     </div>
-
-
-        <Footer />
+    <Footer />
     </div>
   )
 }

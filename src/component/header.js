@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
-export default function Header() {
+export default function Header({user}) {
   return (
     <div>
         <div className="top-bar">
@@ -17,33 +23,43 @@ export default function Header() {
             <div className="container justify-content-between d-flex flex-column align-items-center">
                 <div className="row w-100">
                     <div className="col-3 text-start header-block-1">
-                        <a className="logo" href="./index.html">
-                            <img src="./assets/images/home/f-logo.png" alt="UGC Stocks" />
-                        </a>
+                        <Link className="logo" to="/">
+                            <img src="/assets/images/home/f-logo.png" alt="UGC Stocks" />
+                        </Link>
                     </div>
                     <div className="col-6 text-center menu-list header-block-2" id="navbarSupportedContent">
                         <ul className="menu-list-c">
                             <li className="menu-item">
-                                <a className="menu-link active" aria-current="page" href="./index.html">Home</a>
+                                <Link className="menu-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="menu-item">
-                                <a className="menu-link" href="#">About Us</a>
+                                <Link className="menu-link" to="/about-us">About Us</Link>
                             </li>
                             <li className="menu-item">
-                                <a className="menu-link" href="#">Our Services</a>
+                                <Link className="menu-link" to="/single-services">Our Services</Link>
                             </li>
                             <li className="menu-item">
-                                <a className="menu-link" href="#">Pricing</a>
+                                <Link className="menu-link" to="/pricing-page">Pricing</Link>
                             </li>
                         </ul>
                     </div>
                     <div className="col-3 header-block-3">
-                        <a href="#">
-                            <button className="su-btn">Sign up</button>
-                        </a>
-                        <a href="#">
-                            <button className="si-btn">Sign in</button>
-                        </a>
+                        {
+                            user == null ?
+                                <>
+                                    <Link to="/sign-up">
+                                    <button className="su-btn">Sign up</button>
+                                    </Link>
+                                    <Link to="/sign-in">
+                                        <button className="si-btn">Sign in</button>
+                                    </Link>
+                                </>
+                            :
+                            <Link to="/dashboard">
+                                <button className="si-btn">Dashboard</button>
+                            </Link>
+                        }
+                        
                     </div>
                 </div>
             </div>

@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
+import React , {useEffect, useState} from 'react'
 import Header from '../component/header'
 import Footer from '../component/footer'
 import axios from 'axios';
+import { useLocation, useNavigate, redirect } from 'react-router-dom';
+import {ClipLoader } from 'react-spinners'
 
 
-export default function Signup() {
-
+export default function Signup({login}) {
+    let {search} = useLocation();
+    const redirect = useNavigate();
+    
+    useEffect(() => {
+        if(search){
+            setpriceid(search.split('=')[1])
+        }else{
+            redirect('/pricing-page')
+        }
+    },[])
+    const [priceid, setpriceid] = useState('');
+    const [loader, setloader] = useState(false);
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
     const handleSubmit = async (e) => {
         e.preventDefault();
     
@@ -20,20 +34,27 @@ export default function Signup() {
           setErrorMessage('Passwords do not match');
           return;
         }
-        const response = await axios.post('http://localhost:5000/register', {
+        setloader(true)
+        const response = await axios.post(process.env.REACT_APP_SERVER_URL+'/register', {
             firstName,
             lastName,
             email,
             password,
+            priceid,
           });
-          console.log(response)
-    
+          if(response.data.msg){
+            login(response.data.msg)
+            setloader(false)
+            window.location.href = response.data.msg.url;
+          }else{
+            setErrorMessage(response.data.error);
+            setloader(false)
+          }
       };
 
   return (
     <div>
-        <Header />
-        
+    <Header />
     <div className="inner-pages-banner">
         <div className="container justify-content-center d-flex flex-column align-items-center">
             <div className="row w-100 text-center">
@@ -88,7 +109,12 @@ export default function Signup() {
                                     <input type="password" className="form-control" id="InputConfirmPassword" placeholder="HUNTER2" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
                                 </div>
                                 {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
-                                <button type="submit" className="suf-btn">Sign Up</button>
+                                <button type="submit" className="suf-btn">
+                                    Sign Up
+                                    {
+                                        loader ? <ClipLoader color="#36d7b7" size="40" /> : '' 
+                                    }
+                                </button>
                                 </form>
 
                             {/* <form className="text-start signup_form">
@@ -135,8 +161,7 @@ export default function Signup() {
             </div>
         </div>
     </div>
-
-        <Footer />
+    <Footer />
     </div>
   )
 }

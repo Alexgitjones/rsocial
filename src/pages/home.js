@@ -1,14 +1,27 @@
-import React from 'react'
+import React , {useEffect, useState} from 'react'
 import Header from '../component/header'
 import Footer from '../component/footer'
 import Home_test_slider from '../component/home-test-slider'
+import { useNavigate } from 'react-router-dom';
 
+export default function Home({user}) {
+    // const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')));
+    const navigate = useNavigate();
+    useEffect(() => {
+        // console.log(user)
+    },[user])
 
-export default function Home() {
-    
+    const searchhandle = () => {
+        if(user == null){
+            navigate('/pricing-page')
+        }else{
+            navigate('/dashboard')
+        }
+    }
+
   return (
     <div>
-      <Header />
+      <Header user={user} />
       <div className="banner">
         <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
             <div className="row text-center w-100">
@@ -23,14 +36,73 @@ export default function Home() {
                     <div className="input-group">
                         <input type="search" className="form-control" placeholder="ready to post videos for your socials!"
                             aria-label="Search" aria-describedby="search-addon" />
-                        <button type="button" className="btn" data-mdb-ripple-init>search</button>
+                        <button type="button" onClick={() => searchhandle()} className="btn" data-mdb-ripple-init>search</button>
                     </div>
                 </div>
             </div>
             <div className="row text-center w-100">
                     {/* <div className="col b-block-3"> */}
                     <div className="videos-p col">
-                        <div className="row-1 img-d">
+                    <div className="row-1 img-d">
+                        <div className="v-box">
+                            <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/65c342175f5e330084c95c24_content%20creator%20copy_AE435787-457C-4402-8805-7589E32BB6EB-transcode.mp4"></video>
+                            </div>
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/65c2ee310da86da1f768af38_Modest%20working%20entrepeneur%20candle%20coffeeIMG_2915-transcode.mp4"></video>
+                            </div>
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/65ae212261f1856f54cf4dc4_Copy%20of%20IMG_8150-transcode.mp4"></video>
+                            </div>
+                        </div>
+                        <div className="row-2 img-d">
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/65adff1512fb43a9a31a8d11_1705318411402290-transcode.mp4"></video>
+                            </div>
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/6595217fe3eee3cf0417a4e1_copy_BB9FAF58-CD67-470A-9C3A-8AF0C3C3D146%20studio%20entrepeneur%20working%20business%20-transcode.mp4"></video>
+                            </div>
+                        </div>
+                        <div className="row-3 img-d">
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/6581421f864d9b8b8268d0bf_IMG_3686%20coffee%20next%20to%20window%20-transcode.mp4"></video>
+                            </div>
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/657c1a1e23ef04d5c7d06d17_IMG_5984-transcode.mp4"></video>
+                            </div>
+                        </div>
+                        <div className="row-4 img-d">
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/655b5990b48482c90df989c4_IMG_7914-transcode.mp4"></video>
+                            </div>
+                        </div>
+                        <div className="row-5 img-d">
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/65c342175f5e330084c95c24_content%20creator%20copy_AE435787-457C-4402-8805-7589E32BB6EB-transcode.mp4"></video>
+                            </div>
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/65c342175f5e330084c95c24_content%20creator%20copy_AE435787-457C-4402-8805-7589E32BB6EB-transcode.mp4"></video>
+                            </div>
+                        </div>
+                        <div className="row-6 img-d">
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/6581421f864d9b8b8268d0bf_IMG_3686%20coffee%20next%20to%20window%20-transcode.mp4"></video>
+                            </div>
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/6595217fe3eee3cf0417a4e1_copy_BB9FAF58-CD67-470A-9C3A-8AF0C3C3D146%20studio%20entrepeneur%20working%20business%20-transcode.mp4"></video>
+                            </div>
+                        </div>
+                        <div className="row-7 img-d">
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/657c1a1e23ef04d5c7d06d17_IMG_5984-transcode.mp4"></video>
+                            </div>
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/65adff1512fb43a9a31a8d11_1705318411402290-transcode.mp4"></video>
+                            </div>
+                            <div className="v-box">
+                                <video playsInline loop muted autoPlay data-wf-ignore="true" data-object-fit="cover" src="https://assets-global.website-files.com/640f20513de5c81f88c44ee4/65c2ee310da86da1f768af38_Modest%20working%20entrepeneur%20candle%20coffeeIMG_2915-transcode.mp4"></video>
+                            </div>
+                        </div>
+                        {/* <div className="row-1 img-d">
                             <img src="./assets/images/home/2.png" alt="1" />
                             <img src="./assets/images/home/1.png" alt="1" />
                             <img src="./assets/images/home/2-1.png" alt="1" />
@@ -58,7 +130,7 @@ export default function Home() {
                             <img src="./assets/images/home/12.png" alt="1" />
                             <img src="./assets/images/home/13.png" alt="1" />
                             <img src="./assets/images/home/14.png" alt="1" />
-                        </div>
+                        </div> */}
                     </div>
             </div>
             {/* <div className="row text-center w-100">
@@ -73,7 +145,7 @@ export default function Home() {
                 <div className="col b-block-4">
                     <h6 className="hiw">Here’s how it works</h6>
                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
-                        <g clip-path="url(#clip0_48_73)">
+                        <g clipPath="url(#clip0_48_73)">
                             <path
                                 d="M6.26245 9.85379L0.592451 4.24879C0.152451 3.81879 0.152451 3.11379 0.592451 2.67879C1.03245 2.24379 1.74245 2.24379 2.18245 2.67879L6.26245 6.70879L10.3425 2.67879C10.7825 2.24379 11.4925 2.24379 11.9325 2.67879C12.3725 3.11379 12.3725 3.81879 11.9325 4.24879L6.26245 9.85379Z"
                                 fill="#111111" />
@@ -123,10 +195,10 @@ export default function Home() {
                                         <circle cx="37.6954" cy="37.6954" r="37.1954" fill="#FFC09F" stroke="black" />
                                         <circle cx="37.6955" cy="37.6957" r="23.2426" fill="white" />
                                         <circle cx="37.6955" cy="37.6957" r="22.7426" stroke="black"
-                                            stroke-opacity="0.1" />
+                                            strokeOpacity="0.1" />
                                         <path
                                             d="M43.2899 37.6957L36.1426 44.4222L36.1426 44.4222L36.1418 44.423C35.6593 44.8823 34.8616 44.8834 34.3714 44.4222C33.8886 43.9678 33.8886 43.2407 34.3714 42.7864L34.3715 42.7863L39.6216 37.8413L39.7762 37.6957L39.6216 37.5502L34.3715 32.6052L34.3714 32.6051C33.8886 32.1508 33.8886 31.4236 34.3714 30.9693C34.8616 30.5081 35.6593 30.5092 36.1418 30.9685L36.1426 30.9693L43.2899 37.6957Z"
-                                            fill="black" stroke="white" stroke-width="0.4" />
+                                            fill="black" stroke="white" strokeWidth="0.4" />
                                     </svg>
                                 </div>
                                 <div className="step-box-2">
@@ -149,10 +221,10 @@ export default function Home() {
                                         <circle cx="37.6954" cy="37.6954" r="37.1954" fill="#FFC09F" stroke="black" />
                                         <circle cx="37.6955" cy="37.6957" r="23.2426" fill="white" />
                                         <circle cx="37.6955" cy="37.6957" r="22.7426" stroke="black"
-                                            stroke-opacity="0.1" />
+                                            strokeOpacity="0.1" />
                                         <path
                                             d="M43.2899 37.6957L36.1426 44.4222L36.1426 44.4222L36.1418 44.423C35.6593 44.8823 34.8616 44.8834 34.3714 44.4222C33.8886 43.9678 33.8886 43.2407 34.3714 42.7864L34.3715 42.7863L39.6216 37.8413L39.7762 37.6957L39.6216 37.5502L34.3715 32.6052L34.3714 32.6051C33.8886 32.1508 33.8886 31.4236 34.3714 30.9693C34.8616 30.5081 35.6593 30.5092 36.1418 30.9685L36.1426 30.9693L43.2899 37.6957Z"
-                                            fill="black" stroke="white" stroke-width="0.4" />
+                                            fill="black" stroke="white" strokeWidth="0.4" />
                                     </svg>
                                 </div>
                                 <div className="step-box-3">

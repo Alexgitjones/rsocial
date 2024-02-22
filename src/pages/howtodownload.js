@@ -2,10 +2,10 @@ import React from 'react'
 import Header from '../component/header'
 import Footer from '../component/footer'
 
-export default function Download() {
+export default function Download({user}) {
   return (
     <div>
-        <Header />
+        <Header user={user} />
         <div className="p-container-htd">
                 <div className="container">
 

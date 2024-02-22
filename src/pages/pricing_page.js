@@ -1,11 +1,28 @@
-import React from 'react'
+import React , {useEffect, useState} from 'react'
 import Header from '../component/header'
 import Footer from '../component/footer'
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
-export default function Pricingpage() {
+export default function Pricingpage({user}) {
+    const navigate = useNavigate();
+
+    const make_transaction = async (price) => {
+        const response = await axios.post(process.env.REACT_APP_SERVER_URL+'/maketransaction', {
+            price,
+          });
+          window.location.href = response.data.url;
+    }
+    const handlepayment = (price) => {
+        if(user == null){
+            navigate('/sign-up?payment='+price)
+        }else{
+            make_transaction(price)
+        }
+    }
   return (
     <div>
-        <Header />
+        <Header user={user} />
         <div className="inner-pages-banner">
         <div className="container justify-content-center d-flex flex-column align-items-center">
             <div className="row w-100 text-center">
@@ -74,7 +91,7 @@ export default function Pricingpage() {
                                     </ul>
                                 </div>
                                 <div className="btn-container">
-                                    <a href="#"><button className="select-btn">MEMBER LIMIT REACHED</button></a>
+                                    <a><button onClick={() => handlepayment('price_1OjWo6GcpLd3uHcCqideaIKD')} className="select-btn">MEMBER LIMIT REACHED</button></a>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +115,7 @@ export default function Pricingpage() {
                                     </ul>
                                 </div>
                                 <div className="btn-container">
-                                    <a href="#"><button className="select-btn">Join Now</button></a>
+                                    <a><button onClick={() => handlepayment('price_1OjWpdGcpLd3uHcCkeNZb1Io')} className="select-btn">Join Now</button></a>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +139,7 @@ export default function Pricingpage() {
                                     </ul>
                                 </div>
                                 <div className="btn-container">
-                                    <a href="#"><button className="select-btn">MEMBER LIMIT REACHED</button></a>
+                                    <a><button onClick={() => handlepayment('price_1OjWqIGcpLd3uHcCZ2Vb6P4w')} className="select-btn">MEMBER LIMIT REACHED</button></a>
                                 </div>
                             </div>
                         </div>

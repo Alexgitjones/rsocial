@@ -2,10 +2,10 @@ import React from 'react'
 import Header from '../component/header'
 import Footer from '../component/footer'
 
-export default function Legalterms() {
+export default function Legalterms({user}) {
   return (
     <div>
-        <Header />
+        <Header user={user} />
         
     
         <div className="p-container-licence_term_of_services">

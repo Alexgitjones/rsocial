@@ -2,10 +2,10 @@ import React from 'react'
 import Header from '../component/header'
 import Footer from '../component/footer'
 
-export default function Licenseterms() {
+export default function Licenseterms({user}) {
   return (
     <div>
-        <Header />
+        <Header user={user} />
         
         <div className="p-container-licence_term">
         <div className="container justify-content-center d-flex flex-column align-items-center">
