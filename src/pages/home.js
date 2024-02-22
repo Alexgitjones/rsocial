@@ -284,14 +284,14 @@ export default function Home({user}) {
             <div className="save-time">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 text-start d-flex justify-content-between ">
-                        <div className="col-6 st-block-1 align-self-center">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 st-block-1 align-self-center">
                             <h6 className="st">Save Time</h6>
                             <h1 className="hdng">Create more posts<br /> in less time</h1>
                             <p className="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                         </div>
-                        <div className="col-6 text-end st-block-2">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end st-block-2">
                             <img src="./assets/images/home/st-img.png" alt="Save-Time" />
                             <a href="#"><button className="ecd-btn"><img src="./assets/images/home/s-ecd-btnsds.png" /> Easy
                                     chicken dinner</button></a>
@@ -303,10 +303,10 @@ export default function Home({user}) {
             <div className="extra-boost">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 text-start d-flex justify-content-between ">
-                        <div className="col-6 text-end eb-block-1">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end eb-block-1">
                             <img src="./assets/images/home/eb-img.png" alt="Save-Time" />
                         </div>
-                        <div className="col-6 eb-block-2 align-self-center">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 eb-block-2 align-self-center">
                             <h6 className="eb">EXTRA BOOST</h6>
                             <h1 className="hdng">Boost conversions, engagement and reach</h1>
                             <p className="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

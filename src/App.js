@@ -52,7 +52,7 @@ function App() {
         <Routes>
           {/* Landing Pages */}
           <Route path="/" element={<Home user={user} />} />
-          {/* <Route path="/about-us" element={<Aboutus user={user} />} /> */}
+          <Route path="/about-us" element={<Aboutus user={user} />} />
           <Route path="/privacy-policy" element={<Privacy user={user} />} />
           <Route path="/how-to-download" element={<Download user={user} />} />
           <Route path="/access-denied" element={<Accessdenied user={user} />} />

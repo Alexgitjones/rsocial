@@ -21,7 +21,7 @@ export default function Header({user}) {
         </div>
         <nav className="navbar">
             <div className="container justify-content-between d-flex flex-column align-items-center">
-                <div className="row w-100">
+                <div className="row w-100 desktop-header">
                     <div className="col-3 text-start header-block-1">
                         <Link className="logo" to="/">
                             <img src="/assets/images/home/f-logo.png" alt="UGC Stocks" />
@@ -62,6 +62,38 @@ export default function Header({user}) {
                         
                     </div>
                 </div>
+                <div class="row w-100 mobile_header">
+                <div class="col-lg-3 col-6 header-block-1 justify-content-start d-flex align-items-center">
+                    <a class="logo" href="./index.html">
+                        <img src="./assets/images/home/f-logo.png" alt="UGC Stocks"/>
+                    </a>
+                </div>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page"  href="../index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sign In</a>
+                      </li>
+                  </ul>
+                </div>
+              </div>
             </div>
         </nav>
     </div>
