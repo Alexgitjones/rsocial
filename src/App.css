@@ -1,12 +1,12 @@
 body {
   background: #FFF6E5;
+  overflow: unset !important;
+  
 }
 .mobile_header,.mobile-dashboard-header{
   display: none;
 }
-.mian-div{
-  padding: 0;
-}
+
 .row,
 .container,
 .container-fluid,
