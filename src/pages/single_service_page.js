@@ -24,7 +24,7 @@ export default function Singleservices({user}) {
             <div className="service-content">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 text-start d-flex justify-content-between ">
-                        <div className="col-6 sc-block-1 align-self-center">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 sc-block-1 align-self-center">
                             <h6 className="st">Service Name</h6>
                             <h1 className="hdng">Service Name Here</h1>
                             <p className="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -33,7 +33,7 @@ export default function Singleservices({user}) {
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua.</p>
                         </div>
-                        <div className="col-6 text-end sc-block-2">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end sc-block-2">
                             <img src="./assets/images/single_service_page/sn-img.png" alt="Save-Time" />
                         </div>
                     </div>

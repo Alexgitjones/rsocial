@@ -13,14 +13,14 @@ export default function Forbrand({user}) {
             <div className="custom-content-1">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 text-start d-flex justify-content-between ">
-                        <div className="col-6 cc1-block-1 align-self-center">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 cc1-block-1 align-self-center">
                             <h6 className="sub-hdng">CUSTOM CONTENT</h6>
                             <h1 className="hdng">Custom Video<br /> Package for Brands</h1>
                             <p className="decs">We understand the constant need for fresh, original video content for your social media. Stock
                                 videos just won't cut it – you deserve your own unique, attention-grabbing content, and we're here to make it
                                 happen.</p>
                         </div>
-                        <div className="col-6 text-end cc1-block-2">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end cc1-block-2">
                             <img src="./assets/images/for_brands/Rectangle 40.png" alt="Save-Time" />
                         </div>
                     </div>
@@ -30,10 +30,10 @@ export default function Forbrand({user}) {
             <div className="custom-content-2">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 text-start d-flex justify-content-between ">
-                        <div className="col-6 text-end cc2-block-1">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end cc2-block-1">
                             <img src="./assets/images/for_brands/Rectangle 41.png" alt="Save-Time" />
                         </div>
-                        <div className="col-6 cc2-block-2 align-self-center">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 cc2-block-2 align-self-center">
                             <h6 className="sub-hdng">CUSTOM CONTENT</h6>
                             <h1 className="hdng">Stand Out With Video Content</h1>
                             <p className="decs">We've worked with hundreds of brands and know exactly what's going to get you noticed on social media. Our team will plan, film and deliver ready-to-post videos, starting at $2,500 

@@ -71,7 +71,7 @@ export default function Pricingpage({user}) {
             <div className="pricing_plans">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 gap-4">
-                        <div className="col-4">
+                        <div className="col-xxl-4 col-xl-4 col-lg-4 col-12">
                             <div className="monthly">
                                 <h6 className="sub-hdng">MONTHLY</h6>
 
@@ -95,7 +95,7 @@ export default function Pricingpage({user}) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4">
+                        <div className="col-xxl-4 col-xl-4 col-lg-4 col-12">
                             <div className="monthly">
                                 <h6 className="sub-hdng">QUARTERLY</h6>
 
@@ -119,7 +119,7 @@ export default function Pricingpage({user}) {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-4">
+                        <div className="col-xxl-4 col-xl-4 col-lg-4 col-12">
                             <div className="monthly">
                                 <h6 className="sub-hdng">YEARLY</h6>
 

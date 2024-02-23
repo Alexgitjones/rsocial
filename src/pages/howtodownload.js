@@ -25,10 +25,10 @@ export default function Download({user}) {
                     <div className="htd-details-1">
                         <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                             <div className="row w-100 text-start d-flex justify-content-between ">
-                                <div className="col-6 text-end htd-details-block-1">
+                                <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end htd-details-block-1">
                                     <img src="./assets/images/how_to_download/img1.png" alt="Save-Time" />
                                 </div>
-                                <div className="col-6 htd-details-block-2 align-self-center">
+                                <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 htd-details-block-2 align-self-center">
                                     <h6 className="sub-hdng">HOW TO DOWNLOAD VIDEOS VIA MOBILE Safari Browser</h6>
                                     
                                     <div className="accordion" id="accordionExample">
@@ -73,7 +73,7 @@ export default function Download({user}) {
                     <div className="htd-details-2">
                         <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                             <div className="row w-100 text-start d-flex justify-content-between ">
-                                <div className="col-6 htd-details-2-block-1 align-self-center">
+                                <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 htd-details-2-block-1 align-self-center">
                                     <h6 className="sub-hdng">HOW TO DOWNLOAD VIDEOS VIA MOBILE Safari Browser</h6>
 
                                     <div className="accordion" id="accordion">
@@ -95,7 +95,7 @@ export default function Download({user}) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-6 text-end htd-details-2-block-2">
+                                <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end htd-details-2-block-2">
                                     <img src="./assets/images/how_to_download/img2.png" alt="Save-Time" />
                                 </div>
                             </div>

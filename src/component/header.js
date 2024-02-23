@@ -64,9 +64,9 @@ export default function Header({user}) {
                 </div>
                 <div class="row w-100 mobile_header">
                 <div class="col-lg-3 col-6 header-block-1 justify-content-start d-flex align-items-center">
-                    <a class="logo" href="./index.html">
+                    <Link class="logo" to="/">
                         <img src="./assets/images/home/f-logo.png" alt="UGC Stocks"/>
-                    </a>
+                    </Link>
                 </div>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                   <span class="navbar-toggler-icon"></span>
@@ -74,22 +74,22 @@ export default function Header({user}) {
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                   <ul class="navbar-nav">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page"  href="../index.php">Home</a>
+                      <Link class="nav-link active" aria-current="page"  to="/">Home</Link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About Us</a>
+                      <Link class="nav-link" to="/about-us">About Us</Link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Our Services</a>
+                      <Link class="nav-link" to="/single-services">Our Services</Link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Pricing</a>
+                      <Link class="nav-link" to="/pricing-page">Pricing</Link>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Sign Up</a>
+                      <Link class="nav-link" to="/sign-up">Sign Up</Link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign In</a>
+                        <Link class="nav-link" to="/sign-in">Sign In</Link>
                       </li>
                   </ul>
                 </div>

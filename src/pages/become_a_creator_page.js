@@ -15,10 +15,10 @@ export default function Becomeacreator({user}) {
             <div className="remote-position">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 text-start d-flex justify-content-between ">
-                        <div className="col-6 text-end rp-block-1">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end rp-block-1">
                             <img src="./assets/images/become_a_creator/Rectangle 40.png" alt="Save-Time" />
                         </div>
-                        <div className="col-6 rp-block-2 align-self-center">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 rp-block-2 align-self-center">
                             <h6 className="sub-hdng">REMOTE POSITION</h6>
                             <h1 className="hdng">Become a UGC <br />Stocks Creator</h1>
                             <p className="decs">We're actively seeking remote-based creators to join our team. If you are passionate
@@ -33,7 +33,7 @@ export default function Becomeacreator({user}) {
             <div className="remote-position-form w-100">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 text-start d-flex justify-content-between ">
-                        <div className="col-6 rpf-block-1 align-self-center">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 rpf-block-1 align-self-center">
                             <form>
                                 <div className="mb-3">
                                     <input type="email" className="form-control" id="Email" placeholder="Enter your email *" required />
@@ -74,7 +74,7 @@ export default function Becomeacreator({user}) {
                                 <button type="submit" className="btn">Submit</button>
                               </form>
                         </div>
-                        <div className="col-6 text-end rpf-block-2">
+                        <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end rpf-block-2">
                             <img src="./assets/images/become_a_creator/Rectangle 41.png" alt="Save-Time" />
                         </div>
                     </div>

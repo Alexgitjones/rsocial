@@ -51,10 +51,10 @@ export default function Aboutus({user}) {
                 <div className="about-us">
                     <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                         <div className="row w-100 text-start d-flex justify-content-between ">
-                            <div className="col-6 text-end au-block-1">
+                            <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end au-block-1">
                                 <img src="./assets/images/about_us/a-img.png" alt="Save-Time" />
                             </div>
-                            <div className="col-6 au-block-2 align-self-center">
+                            <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 au-block-2 align-self-center">
                                 <h6 className="eb">About Us</h6>
                                 <h1 className="hdng">How WE Are</h1>
                                 <p className="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -71,14 +71,14 @@ export default function Aboutus({user}) {
                 <div className="save-time-about">
                     <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                         <div className="row w-100 text-start d-flex justify-content-between ">
-                            <div className="col-6 sta-block-1 align-self-center">
+                            <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 sta-block-1 align-self-center">
                                 <h6 className="st">Save Time</h6>
                                 <h1 className="hdng">Create more posts<br /> in less time</h1>
                                 <p className="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                                     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             </div>
-                            <div className="col-6 text-end sta-block-2">
+                            <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end sta-block-2">
                                 <img src="./assets/images/about_us/sta-img.png" alt="Save-Time" />
                             </div>
                         </div>
@@ -88,10 +88,10 @@ export default function Aboutus({user}) {
                 <div className="extra-boost-about mb-5">
                     <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                         <div className="row w-100 text-start d-flex justify-content-between ">
-                            <div className="col-6 text-end eba-block-1">
+                            <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end eba-block-1">
                                 <img src="./assets/images/about_us/exb-img.png" alt="Save-Time" />
                             </div>
-                            <div className="col-6 eba-block-2 align-self-center">
+                            <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 eba-block-2 align-self-center">
                                 <h6 className="eb">EXTRA BOOST</h6>
                                 <h1 className="hdng">Boost conversions, engagement and reach</h1>
                                 <p className="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
