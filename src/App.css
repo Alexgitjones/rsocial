@@ -4830,14 +4830,14 @@ div#collapsibleNavbar {
     padding: 5px 20px;
 }
 .ltos-block-1 .hdng-section .col-8 .hdng {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 30px;
+  line-height: 30px;
 }
 .ltos-block-1 .hdng-section {
   margin-bottom: 15px;
 }
 .ltos-block-1 .hdng-section .col-8 .hdng:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .ltos-block-1 .hdng-section .col-4 .last-update-date {
   font-size: 11px;
