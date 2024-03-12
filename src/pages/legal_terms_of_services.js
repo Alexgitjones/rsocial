@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "../component/header";
-import Footer from "../component/footer";
+import Textanimation from '../component/textanimation';
+import Preloader from '../component/preloader';
 
 export default function Legalterms({ user }) {
   return (
     <div>
-      <Header user={user} />
-
+      {/* <Preloader /> */}
       <div className="p-container-licence_term_of_services">
         <div className="container justify-content-center d-flex flex-column align-items-center">
           <div className="licence_term_of_services">
@@ -14,10 +13,12 @@ export default function Legalterms({ user }) {
               <div className="row w-100 d-flex justify-content-between">
                 <div className="col ltos-block-1">
                   <h6 className="sub-hdng">Legal Terms </h6>
+                  {/* <Textanimation text="Legal Terms" /> */}
                   <div className="hdng-section">
                     <div className="col-8">
-                      <h1 className="hdng">License and Terms</h1>
-                      <h1 className="hdng">of service</h1>
+                      <Textanimation align="left" text="License and Terms" />
+                      <Textanimation align="left" text="of service" />
+                      {/* <h1 className="hdng">of service</h1> */}
                     </div>
                     <div className="col-4 text-end d-flex align-items-end justify-content-end">
                       <p className="last-update-date">
@@ -469,8 +470,6 @@ export default function Legalterms({ user }) {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

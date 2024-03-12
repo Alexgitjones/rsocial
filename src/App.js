@@ -28,6 +28,8 @@ import Thank from './dashboard/thank';
 import axios from 'axios';
 import Singleview from './dashboard/singleview';
 import Favourite from './dashboard/favourite';
+import { motion } from "framer-motion";
+import Main from './pages/main';
 
 function App() {
   
@@ -51,9 +53,23 @@ function App() {
       <Router>
         <Routes>
           {/* Landing Pages */}
-          <Route path="/" element={<Home user={user} />} />
-          <Route path="/about-us" element={<Aboutus user={user} />} />
-          <Route path="/privacy-policy" element={<Privacy user={user} />} />
+          <Route path="/" element={<Main user={user} />} >
+            <Route index element={ <Home user={user} /> } />
+            <Route path="/about-us" element={<Aboutus user={user} />} />
+            <Route path="/privacy-policy" element={<Privacy user={user} />} />
+            <Route path="/how-to-download" element={<Download user={user} />} />
+            <Route path="/access-denied" element={<Accessdenied user={user} />} />
+            <Route path="/become-a-creator" element={<Becomeacreator user={user} />} />
+            <Route path="/for-brands" element={<Forbrand user={user} />} />
+            <Route path="/legal-terms" element={<Legalterms user={user} />} />
+            <Route path="/license-terms" element={<Licenseterms user={user} />} />
+            <Route path="/pricing-page" element={<Pricingpage user={user} />} />
+            <Route path="/single-services" element={<Singleservices user={user} />} />
+            <Route path="*" element={<Accessdenied user={user} />} />
+            <Route path="thank-you" element={<Thank user={user} login={login} />} />
+            <Route path="single-view" element={<Singleview />} />
+          </Route>
+          {/* <Route path="/privacy-policy" element={<Privacy user={user} />} />
           <Route path="/how-to-download" element={<Download user={user} />} />
           <Route path="/access-denied" element={<Accessdenied user={user} />} />
           <Route path="/become-a-creator" element={<Becomeacreator user={user} />} />
@@ -64,7 +80,7 @@ function App() {
           <Route path="/single-services" element={<Singleservices user={user} />} />
           <Route path="*" element={<Accessdenied user={user} />} />
           <Route path="thank-you" element={<Thank user={user} login={login} />} />
-          <Route path="single-view" element={<Singleview />} />
+          <Route path="single-view" element={<Singleview />} /> */}
           {/* Dashboard Pages */}
           <Route path="dashboard" element={<Dashboard logout={logout} user={user} />} >
             <Route index element={ <Allcontent user={user} /> } />

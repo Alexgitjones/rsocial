@@ -1,14 +1,10 @@
 import React from 'react'
-import Header from '../component/header'
-import Footer from '../component/footer'
+import Preloader from '../component/preloader';
 
 export default function Becomeacreator({user}) {
   return (
     <div>
-        <Header user={user} />
-        
-  
-
+    {/* <Preloader /> */}
     <div className="p-container-become_a_creator">
         <div className="container justify-content-center d-flex flex-column align-items-center">
 
@@ -93,7 +89,6 @@ export default function Becomeacreator({user}) {
             </div>
         </div>
     </div>
-        <Footer />
     </div>
   )
 }

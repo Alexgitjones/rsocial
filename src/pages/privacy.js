@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../component/header'
-import Footer from '../component/footer'
+import Textanimation from '../component/textanimation';
+import Preloader from '../component/preloader';
 
 export default function Privacy({user}) {
   return (
     <div>
-        <Header user={user} />
+        {/* <Preloader /> */}
         <div className="p-container-privacy_policy">
             <div className="container justify-content-center d-flex flex-column align-items-center">
 
@@ -13,7 +13,8 @@ export default function Privacy({user}) {
                     <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                         <div className="row w-100 d-flex justify-content-between">
                             <div className="col ppc-block-1">
-                                <h6 className="sub-hdng">Our policIes</h6>
+                                {/* <h6 className="sub-hdng">Our policIes</h6> */}
+                                <Textanimation text="Our policIes" />
                                 <h1 className="hdng">Privacy policy</h1>
                                 <div className="hdng-section">
                                     <div className="col-8">
@@ -270,7 +271,6 @@ export default function Privacy({user}) {
                 </div>
             </div>
         </div>
-        <Footer />
     </div>
   )
 }

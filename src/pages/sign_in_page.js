@@ -38,8 +38,6 @@ export default function Signin() {
       };
   return (
     <div>
-        <Header />
-        
     <div className="inner-pages-banner">
         <div className="container justify-content-center d-flex flex-column align-items-center">
             <div className="row w-100 text-center">
@@ -88,9 +86,6 @@ export default function Signin() {
             <hr className="divider" />
         </div>
     </div>
-
-
-        <Footer />
     </div>
   )
 }

@@ -8,6 +8,7 @@ import {
     useLocation
   } from "react-router-dom";
   import axios from 'axios';
+  import { animate, stagger } from "framer-motion"
 
 export default function Sidebar({logout, user}) {
     const navigate = useNavigate();
@@ -21,9 +22,18 @@ export default function Sidebar({logout, user}) {
         if(user == null){
             navigate('/sign-in')
         }else{
-            const response = axios.get(process.env.REACT_APP_SERVER_URL+'/invoice/'+user.UserID)
-            response.then(json => setinvoice(json.data.data))
+            if(user.status == 'complete'){
+                try{
+                    const response = axios.get(process.env.REACT_APP_SERVER_URL+'/invoice/'+user.UserID)
+                    response.then(json => setinvoice(json.data.data))
+                }
+                catch(error){
+                    console.log(error)
+                }
+            }
         }
+
+        animate("li.mb-2", { opacity:[0,1] , x: [-100, 0] }, { type: "spring" , delay:stagger(0.3) })
     },[user])
   return (
 
@@ -82,7 +92,7 @@ export default function Sidebar({logout, user}) {
                 </g>
             </svg>
 
-            Saved
+            Favourite
             </Link>
         </li>
         </ul>
@@ -175,7 +185,7 @@ export default function Sidebar({logout, user}) {
                 </g>
             </svg>
 
-            Saved
+            Favourite
             </Link>
         </li>
         </ul>

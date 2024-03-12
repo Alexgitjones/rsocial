@@ -4,11 +4,12 @@ import Footer from '../component/footer'
 import { useLocation, useNavigate, redirect } from 'react-router-dom';
 import axios from 'axios';
 import { PulseLoader , ClipLoader } from 'react-spinners'
+import { motion } from "framer-motion";
 
 export default function Singleview() {
     let {search} = useLocation();
     const [getid,setgetid] = useState(search.split('=')[1]);
-    const [videourl,setvideourl] = useState(search.split('=')[1]);
+    const [videourl,setvideourl] = useState(null);
     const [btnloader, setbtnloader] = useState(false);
     const getsingle_video = async (id) => {
         const response = await axios.post(process.env.REACT_APP_SERVER_URL+'/getsinglevideo', {
@@ -58,7 +59,13 @@ export default function Singleview() {
                             <h1 className="hdng">Video</h1>
                             <div className='parent_inner_single_view_video'>
                                 <div className='inner_single_view_video'>
-                                    <video playsInline="" loop muted="" autoPlay={true} data-wf-ignore={true} data-object-fit="cover" src={videourl}></video>
+                                        {/* <PulseLoader color="#fd9d6bbf" cssOverride={{textAlign:'center'}} size="50px" /> */}
+                                    {
+                                        videourl == null ?
+                                        <PulseLoader color="#fd9d6bbf" cssOverride={{textAlign:'center'}} size="75px" />
+                                        :
+                                        <motion.video transition={{delay: 0.8 , duration:1 , type: "spring" , ease: "linear" , bounce: 0.6}} initial={{ y:40, opacity:0 }} animate={{ y:0 , opacity:1 }} playsInline="" loop muted="" autoPlay={true} data-wf-ignore={true} data-object-fit="cover" src={videourl}></motion.video>
+                                    }
                                 </div>
                             </div>
                             <a href="http://res.cloudinary.com/du73if3k3/video/upload/v1707532364/lb3vqglp8jvurnfgajo8.mp4" download >

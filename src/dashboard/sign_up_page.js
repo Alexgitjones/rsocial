@@ -42,13 +42,18 @@ export default function Signup({login}) {
             password,
             priceid,
           });
-          if(response.data.msg){
-            login(response.data.msg)
-            setloader(false)
-            window.location.href = response.data.msg.url;
+          if(response.error){
+                setErrorMessage('Something Is working ! Please try again.');
+                setloader(false)
           }else{
-            setErrorMessage(response.data.error);
-            setloader(false)
+             if(response.data.msg){
+                login(response.data.msg)
+                setloader(false)
+                window.location.href = response.data.msg.url;
+              }else{
+                setErrorMessage(response.data.error);
+                setloader(false)
+              }
           }
       };
 

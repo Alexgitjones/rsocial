@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { PulseLoader , ClipLoader } from 'react-spinners'
+import { motion } from "framer-motion";
 
 export default function Favourite({user}) {
   const redirect = useNavigate()
@@ -11,10 +12,14 @@ export default function Favourite({user}) {
     const geturlvideo = async () => {
       try{
         let response = await axios.get(process.env.REACT_APP_SERVER_URL+"/video/"+user.UserID);
-        if(response.data.error){
+        if(response.error){
           setallvideo([])
         }else{
-          setallvideo(response.data.favourite)
+          if(response.data.error){
+            setallvideo([])
+          }else{
+            setallvideo(response.data.favourite)
+          }
         }
       } catch(err){
         setallvideo([])
@@ -29,6 +34,16 @@ export default function Favourite({user}) {
     const handleview = (id) => {
       redirect('/single-view?id='+id)
     }
+
+    const video_item = {
+      hidden: { scale: 0},
+      visible: (custom) => (
+        {
+          transition: { delay: custom * 0.1 },
+          scale: 1
+        }
+      )
+    };
   return (
     <div>
           <div className="tab-content" id="pills-tabContent">
@@ -38,16 +53,18 @@ export default function Favourite({user}) {
           :
           <div className="tab-pane fade show active" id="pills-modest" role="tabpanel" aria-labelledby="pills-modest-tab" tabIndex="0">
             {
+              allvideo.length > 0 ?
               allvideo.map((values,key) => {
                 return(
-                  <div key={key} className="v-box">
+                  <motion.div animate="visible" initial="hidden" custom={key}  variants={video_item} key={key} className="v-box">
                     <img className="video_thumb" src={values.imageurl} ></img>
                       <div className="hover-buttons">
                         <button onClick={() => handleview(values.ContentID)} className="hb-2">View</button>
                       </div>
-                  </div>
+                  </motion.div>
                 )
               })
+              : <h1 class="nt-found">Not Found</h1>
             }
             </div>
             }

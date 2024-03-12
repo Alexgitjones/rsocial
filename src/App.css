@@ -50,8 +50,10 @@ body {
 
 .navbar .container {
   border-bottom: 1px solid #000;
-  padding-top: 32.5px !important;
-  padding-bottom: 32.5px !important;
+  /* padding-top: 32.5px !important;
+  padding-bottom: 32.5px !important; */
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
 }
 
 .header-block-1 .logo img {
@@ -154,12 +156,14 @@ body {
 /* banner start */
 
 .banner {
-  padding-top: 85.58px;
+  /* padding-top: 85.58px; */
+  padding-top: 50px;
 }
 
 .b-block-1 .b-logo {
-  width: 648.827px;
-  height: 117.553px;
+  /* width: 648.827px; */
+  width: 25%;
+  /* height: 117.553px; */
   margin-bottom: 20.74px;
 }
 
@@ -343,6 +347,16 @@ text-align: start;
 max-width: 365px;
 margin: 0;
 }
+/* .hdng span{
+  color: #000 !important;
+  font-family: 'Seasons' !important;
+  font-size: 70px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 60px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 30.51px !important;
+} */
 .hit-info-block-1 .divider {
   border-top: 2px solid #000;
   opacity: 0.15;
@@ -393,6 +407,7 @@ font-weight: 700;
 line-height: 56px; /* 121.739% */
 text-transform: uppercase;
 margin-bottom: 30px;
+/* margin-bottom: 0px; */
 }
 
 .st-block-1 .decs{
@@ -1025,7 +1040,7 @@ padding: 18px 45.5px;
 }
 .ugc-footer .container .f-row-1{
   margin-bottom: 80.47px;
-  column-gap: 4.1671873rem;
+  column-gap: 3.167187rem;
 }
 /* .ugc-footer .container .row.gap-5 {
   gap: 4.1671873rem!important;
@@ -5111,3 +5126,70 @@ div#collapsibleNavbar {
 
 }
 
+.save-time .hdng , .extra-boost .hdng{
+  margin-bottom: 0px !important;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+.preload-ani {
+    display: block;
+    position: absolute;
+    background-color: #fd9d6b;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+.b-logo{
+  z-index: 99999999;
+  position: relative;
+}
+
+.preload-ani-black{
+    display: block;
+    position: absolute;
+    background-color: #E4FEF8;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+}
+
+.preload-ani-pink{
+  display: block;
+  position: absolute;
+  background-color: #FFE5E9;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.join-now .hdng{
+  margin-bottom: 0px !important;
+}
+.save-time-about .hdng , .extra-boost-about .hdng{
+  margin-bottom: 0px !important;
+}
+/* .main-parent_anim {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 99999;
+  top: 0;
+} */

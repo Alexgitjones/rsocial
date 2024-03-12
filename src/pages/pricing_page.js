@@ -1,8 +1,10 @@
 import React , {useEffect, useState} from 'react'
-import Header from '../component/header'
-import Footer from '../component/footer'
+import Textanimation from '../component/textanimation';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Preloader from '../component/preloader';
+import Imageanimation from '../component/imageanimation';
+import { motion } from "framer-motion";
 
 export default function Pricingpage({user}) {
     const navigate = useNavigate();
@@ -22,13 +24,16 @@ export default function Pricingpage({user}) {
     }
   return (
     <div>
-        <Header user={user} />
+        {/* <Preloader /> */}
         <div className="inner-pages-banner">
         <div className="container justify-content-center d-flex flex-column align-items-center">
             <div className="row w-100 text-center">
                 <div className="col ipb-block-1">
-                    <h1 className="hdng">Pricing</h1>
+                    {/* <h1 className="hdng">Pricing</h1> */}
+                    <Textanimation text="Pricing" />
+                    <Imageanimation>
                     <h6 className="breadcrumbs">Home {'>>'} Pricing</h6>
+                    </Imageanimation>
                 </div>
             </div>
         </div>
@@ -41,29 +46,36 @@ export default function Pricingpage({user}) {
             <div className="select-plan-slider">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 text-center">
+                        <Imageanimation>
                         <div className="col sps-block-1">
                             <h6 className="sub-hdng">SELECT A PLAN TO START DOWNLOAD</h6>
-                            <h1 className="hdng">Why is there a member limit?</h1>
+                            {/* <h1 className="hdng">Why is there a member limit?</h1> */}
+                            <Textanimation text="Why is there a member limit?" />
                             <p className="decs">We put a limit on our membership to keep our videos exclusive – giving you a<br /> unique edge over others
-                                </p>             
-                            </div>
-                        
+                            </p>             
+                        </div>
+                        </Imageanimation>
                     </div>
                     <div className="row w-100 text-center">
+                    <Imageanimation>
                         <div className="col sps-block-2">
                             <h6 className="sub-hdng">SELECT A PLAN TO START DOWNLOAD</h6>
-                            <h1 className="hdng">Does it work?</h1>
+                            {/* <h1 className="hdng">Does it work?</h1> */}
+                            <Textanimation text="Does it work?" />
                             <p className="decs">We have the receipts! See our members reach millions under the ‘results’ story<br /> highlights on our Instagram 😍</p>
                         </div>
+                    </Imageanimation>
                     </div>
                     <div className="row w-100 text-center">
+                        <Imageanimation>
                         <div className="col sps-block-1">
                             <h6 className="sub-hdng">SELECT A PLAN TO START DOWNLOAD</h6>
-                            <h1 className="hdng">Not quite sure what to expect?</h1>
+                            {/* <h1 className="hdng">Not quite sure what to expect?</h1> */}
+                            <Textanimation text="Not quite sure what to expect?" />
                             <p className="decs">We create the latest aesthetic lifestyle videos for females, males and brands - head over to our IG to see our<br /> videos in use. Sign up now to start creating more content without filming them yourself 🪄
-
                             </p>
                         </div>
+                        </Imageanimation>
                     </div>
                 </div>
             </div>
@@ -71,7 +83,7 @@ export default function Pricingpage({user}) {
             <div className="pricing_plans">
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 gap-4">
-                        <div className="col-xxl-4 col-xl-4 col-lg-4 col-12">
+                        <motion.div transition={{delay:0.4 , duration:1, type: "spring", ease: "circIn" , bounce: 0.4 }} initial={{ y:100, opacity:0 }} whileInView={{ y:0, opacity:1 }} viewport={{ once: true }} className="col-xxl-4 col-xl-4 col-lg-4 col-12">
                             <div className="monthly">
                                 <h6 className="sub-hdng">MONTHLY</h6>
 
@@ -91,11 +103,11 @@ export default function Pricingpage({user}) {
                                     </ul>
                                 </div>
                                 <div className="btn-container">
-                                    <a><button onClick={() => handlepayment('price_1OjWo6GcpLd3uHcCqideaIKD')} className="select-btn">MEMBER LIMIT REACHED</button></a>
+                                    <a><button onClick={() => handlepayment('price_1Oor2eA8UKojBEm6j0F3aNqT')} className="select-btn">MEMBER LIMIT REACHED</button></a>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-xxl-4 col-xl-4 col-lg-4 col-12">
+                        </motion.div>
+                        <motion.div transition={{delay:0.6 , duration:1, type: "spring", ease: "circIn" , bounce: 0.4 }} initial={{ y:100, opacity:0 }} whileInView={{ y:0, opacity:1 }} viewport={{ once: true }} className="col-xxl-4 col-xl-4 col-lg-4 col-12">
                             <div className="monthly">
                                 <h6 className="sub-hdng">QUARTERLY</h6>
 
@@ -115,11 +127,11 @@ export default function Pricingpage({user}) {
                                     </ul>
                                 </div>
                                 <div className="btn-container">
-                                    <a><button onClick={() => handlepayment('price_1OjWpdGcpLd3uHcCkeNZb1Io')} className="select-btn">Join Now</button></a>
+                                    <a><button onClick={() => handlepayment('price_1Oor33A8UKojBEm6E1L1kDED')} className="select-btn">Join Now</button></a>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-xxl-4 col-xl-4 col-lg-4 col-12">
+                        </motion.div>
+                        <motion.div transition={{delay:0.8 , duration:1, type: "spring", ease: "circIn" , bounce: 0.4 }} initial={{ y:100, opacity:0 }} whileInView={{ y:0, opacity:1 }} viewport={{ once: true }} className="col-xxl-4 col-xl-4 col-lg-4 col-12">
                             <div className="monthly">
                                 <h6 className="sub-hdng">YEARLY</h6>
 
@@ -139,17 +151,15 @@ export default function Pricingpage({user}) {
                                     </ul>
                                 </div>
                                 <div className="btn-container">
-                                    <a><button onClick={() => handlepayment('price_1OjWqIGcpLd3uHcCZ2Vb6P4w')} className="select-btn">MEMBER LIMIT REACHED</button></a>
+                                    <a><button onClick={() => handlepayment('price_1Oor3QA8UKojBEm6H0deayAI')} className="select-btn">MEMBER LIMIT REACHED</button></a>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-        <Footer />
     </div>
   )
 }

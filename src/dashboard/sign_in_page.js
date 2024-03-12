@@ -22,10 +22,14 @@ export default function Signin({login}) {
             email,
             password,
         });
-        if(response.data.error){
-            setErrorMessage(response.data.error);
+        if(response.error){
+            setErrorMessage('Something is Wrong ! Please try again');
         }else{
-            login(response.data.msg)
+            if(response.data.error){
+                setErrorMessage(response.data.error);
+            }else{
+                login(response.data.msg)
+            }
         }
         setloader(false)
 

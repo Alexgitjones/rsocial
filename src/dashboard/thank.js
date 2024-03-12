@@ -27,6 +27,7 @@ export default function Thank({user,login}) {
 
     useEffect(() => {
         if(searchParams.get('success')){
+            // console.log(user.UserID)
             handlesession(searchParams.get('session_id'),user.UserID)
         }else{
             setpayfail(true)

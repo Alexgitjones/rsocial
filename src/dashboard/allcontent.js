@@ -1,10 +1,13 @@
 import React, {useState, useEffect, memo} from 'react'
 import axios from 'axios';
 import { useLocation, useNavigate, redirect, Link } from 'react-router-dom';
-import { PulseLoader , ClipLoader } from 'react-spinners'
+import { PulseLoader , ClipLoader } from 'react-spinners';
+import { motion } from "framer-motion";
 
 export default memo(function Allcontent({user}) {
   // console.log(user)
+
+
   const [alltag, setalltag] = useState([]);
   const [tagword, settagword] = useState([]);
   const [allvideo, setallvideo] = useState([]);
@@ -19,13 +22,20 @@ export default memo(function Allcontent({user}) {
   const geturlvideo = async (check) => {
     try{
       let response = await axios.get(process.env.REACT_APP_SERVER_URL+"/video/"+user.UserID);
-      if(response.data.error){
-        setallvideo([])
-        setalltag([]) 
+      if(response.error){
+          setallvideo([])
+          setalltag([])
+          setsavedvideo([])
       }else{
-        setallvideo(response.data.video)
-        setalltag(response.data.videotag)
-        setsavedvideo(response.data.favourite.map((index) => { return index.ContentID }))
+        if(response.data.error){
+          setallvideo([])
+          setalltag([])
+          setsavedvideo([])
+        }else{
+          setallvideo(response.data.video)
+          setalltag(response.data.videotag)
+          setsavedvideo(response.data.favourite.map((index) => { return index.ContentID }))
+        }
       }
     } catch(err){
       setallvideo([])
@@ -48,7 +58,11 @@ export default memo(function Allcontent({user}) {
       axios.get(process.env.REACT_APP_SERVER_URL+'/filtertag',{ params: [search]})
         .then(
         (response) =>{
-          setallvideo(response.data.data)
+          if(response.error){
+            setallvideo([])
+          }else{
+            setallvideo(response.data.data)
+          }
           setbtnloader(false)
         });
     }else{
@@ -59,7 +73,13 @@ export default memo(function Allcontent({user}) {
   useEffect(() => {
     axios.get(process.env.REACT_APP_SERVER_URL+'/filtertag',{ params: tagword})
       .then(
-      response => setallvideo(response.data.data)
+      (response) =>{
+        if(response.error){
+          setallvideo([])
+        }else{
+          setallvideo(response.data.data)
+        }
+      }
     );
 },[tagword]);
 
@@ -84,6 +104,27 @@ const saveview = async (contentid,userid) => {
   setsaveloader(false)
   geturlvideo()
 }
+
+const anim_item = {
+  hidden: { opacity: 0},
+  visible: (custom) => (
+    {
+      transition: { delay: 1 + custom * 0.2 },
+      opacity: 1
+    }
+  )
+};
+
+const video_item = {
+  hidden: { scale: 0},
+  visible: (custom) => (
+    {
+      transition: { delay: 1 + custom * 0.15 , type: "spring" , ease: "linear" , bounce: 0.4 },
+      scale: 1
+    }
+  )
+};
+
   return (
     <div>
         <div className="input-group">
@@ -99,7 +140,7 @@ const saveview = async (contentid,userid) => {
             alltag.map((index,key) => {
               // if(false){
               return(
-                <li key={key} className={tagword.includes(index) ? 'active nav-item' : 'nav-item'} role="presentation">
+                <motion.li animate="visible" initial="hidden" custom={key}  variants={anim_item} key={key} className={tagword.includes(index) ? 'active nav-item' : 'nav-item'} role="presentation">
                   <button onClick={() => taghandler(index)} className="nav-link active" id="pills-modest-tab" data-bs-toggle="pill" data-bs-target="#pills-modest" type="button" role="tab" aria-controls="pills-modest" aria-selected="true">
                     {index}
                     {
@@ -108,7 +149,7 @@ const saveview = async (contentid,userid) => {
                     : ''
                     }
                     </button>
-                </li>
+                </motion.li>
               )
               // }
             })
@@ -128,17 +169,17 @@ const saveview = async (contentid,userid) => {
             {
               allvideo.map((values,key) => {
                 return(
-                  <div key={key} className="v-box">
+                  <motion.div animate="visible" initial="hidden" custom={key}  variants={video_item} key={key} className="v-box">
                     <img className="video_thumb" src={values.imagepath} ></img>
                     {/* <video playsInline="" loop muted="" autoPlay={true} data-wf-ignore={true} data-object-fit="cover" src={values.FilePath}></video> */}
                       <div className="hover-buttons">
                         {
                           savedvideo.includes(values.ContentID) ? '' :
-                          <button onClick={() => saveview(values.ContentID,user.UserID)} className="hb-1">Save <ClipLoader loading={saveloader} size="15px" /></button>
+                          <button onClick={() => saveview(values.ContentID,user.UserID)} className="hb-1">Save to favourite <ClipLoader loading={saveloader} size="15px" /></button>
                         }
                         <button onClick={() => handleview(values.ContentID)} className="hb-2">View</button>
                       </div>
-                  </div>
+                  </motion.div>
                 )
               })
             }

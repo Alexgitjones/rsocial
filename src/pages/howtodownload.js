@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../component/header'
-import Footer from '../component/footer'
+import Textanimation from '../component/textanimation';
+import Preloader from '../component/preloader';
 
 export default function Download({user}) {
   return (
     <div>
-        <Header user={user} />
+        {/* <Preloader /> */}
         <div className="p-container-htd">
                 <div className="container">
 
@@ -13,7 +13,8 @@ export default function Download({user}) {
                         <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                             <div className="row w-100 text-center">
                                 <div className="col htd-banner-block-1">
-                                    <h6 className="sub-hdng">HOW TO DOWNLOAD</h6>
+                                    {/* <h6 className="sub-hdng">HOW TO DOWNLOAD</h6> */}
+                                    <Textanimation text="HOW TO DOWNLOAD" />
                                     <p className="decs">One thing to note: Video previews won’t auto play if your phone is set to
                                         battery saving modeTurn off<br /> battery saving mode on your mobile to see the video play
                                         automatically</p>
@@ -119,7 +120,6 @@ export default function Download({user}) {
 
                 </div>
             </div>
-        <Footer />
     </div>
   )
 }

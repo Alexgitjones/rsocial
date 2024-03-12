@@ -6,7 +6,8 @@ import {
     Link
   } from "react-router-dom";
 
-export default function Header({user}) {
+export default function Header({user, path}) {
+    
   return (
     <div>
         <div className="top-bar">
@@ -30,16 +31,16 @@ export default function Header({user}) {
                     <div className="col-6 text-center menu-list header-block-2" id="navbarSupportedContent">
                         <ul className="menu-list-c">
                             <li className="menu-item">
-                                <Link className="menu-link active" aria-current="page" to="/">Home</Link>
+                                <Link className={`menu-link ${path == '/' ? 'active' : ''} `} aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="menu-item">
-                                <Link className="menu-link" to="/about-us">About Us</Link>
+                                <Link className={`menu-link ${path == '/about-us' ? 'active' : ''} `} to="/about-us">About Us</Link>
                             </li>
                             <li className="menu-item">
-                                <Link className="menu-link" to="/single-services">Our Services</Link>
+                                <Link className={`menu-link ${path == '/single-services' ? 'active' : ''} `} to="/single-services">Our Services</Link>
                             </li>
                             <li className="menu-item">
-                                <Link className="menu-link" to="/pricing-page">Pricing</Link>
+                                <Link className={`menu-link ${path == '/pricing-page' ? 'active' : ''} `} to="/pricing-page">Pricing</Link>
                             </li>
                         </ul>
                     </div>
@@ -62,34 +63,34 @@ export default function Header({user}) {
                         
                     </div>
                 </div>
-                <div class="row w-100 mobile_header">
-                <div class="col-lg-3 col-6 header-block-1 justify-content-start d-flex align-items-center">
-                    <Link class="logo" to="/">
+                <div className="row w-100 mobile_header">
+                <div className="col-lg-3 col-6 header-block-1 justify-content-start d-flex align-items-center">
+                    <Link className="logo" to="/">
                         <img src="./assets/images/home/f-logo.png" alt="UGC Stocks"/>
                     </Link>
                 </div>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                  <span class="navbar-toggler-icon"></span>
+                <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                  <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <Link class="nav-link active" aria-current="page"  to="/">Home</Link>
+                <div className="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul className="navbar-nav">
+                    <li className="nav-item">
+                      <Link className="nav-link active" aria-current="page"  to="/">Home</Link>
                     </li>
-                    <li class="nav-item">
-                      <Link class="nav-link" to="/about-us">About Us</Link>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/about-us">About Us</Link>
                     </li>
-                    <li class="nav-item">
-                      <Link class="nav-link" to="/single-services">Our Services</Link>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/single-services">Our Services</Link>
                     </li>
-                    <li class="nav-item">
-                      <Link class="nav-link" to="/pricing-page">Pricing</Link>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/pricing-page">Pricing</Link>
                     </li>
-                    <li class="nav-item">
-                      <Link class="nav-link" to="/sign-up">Sign Up</Link>
+                    <li className="nav-item">
+                      <Link className="nav-link" to="/sign-up">Sign Up</Link>
                     </li>
-                    <li class="nav-item">
-                        <Link class="nav-link" to="/sign-in">Sign In</Link>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/sign-in">Sign In</Link>
                       </li>
                   </ul>
                 </div>

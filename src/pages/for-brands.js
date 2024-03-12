@@ -1,12 +1,11 @@
 import React from 'react'
-import Header from '../component/header'
-import Footer from '../component/footer'
+import Textanimation from '../component/textanimation';
+import Preloader from '../component/preloader';
 
 export default function Forbrand({user}) {
   return (
     <div>
-        <Header user={user} />
-        
+    {/* <Preloader /> */}
     <div className="p-container-for_brands">
         <div className="container justify-content-center d-flex flex-column align-items-center">
 
@@ -14,7 +13,8 @@ export default function Forbrand({user}) {
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 text-start d-flex justify-content-between ">
                         <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 cc1-block-1 align-self-center">
-                            <h6 className="sub-hdng">CUSTOM CONTENT</h6>
+                            {/* <h6 className="sub-hdng">CUSTOM CONTENT</h6> */}
+                            <Textanimation text="CUSTOM CONTENT" />
                             <h1 className="hdng">Custom Video<br /> Package for Brands</h1>
                             <p className="decs">We understand the constant need for fresh, original video content for your social media. Stock
                                 videos just won't cut it – you deserve your own unique, attention-grabbing content, and we're here to make it
@@ -104,8 +104,6 @@ export default function Forbrand({user}) {
             </div>
         </div>
     </div>
-
-        <Footer />
     </div>
   )
 }

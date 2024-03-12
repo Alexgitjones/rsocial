@@ -1,12 +1,11 @@
 import React from 'react'
-import Header from '../component/header'
-import Footer from '../component/footer'
+import Textanimation from '../component/textanimation';
+import Preloader from '../component/preloader';
 
 export default function Licenseterms({user}) {
   return (
     <div>
-        <Header user={user} />
-        
+        {/* <Preloader /> */}
         <div className="p-container-licence_term">
         <div className="container justify-content-center d-flex flex-column align-items-center">
 
@@ -14,7 +13,8 @@ export default function Licenseterms({user}) {
                 <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                     <div className="row w-100 d-flex justify-content-between ">
                         <div className="col l-block-1">
-                            <h1 className="hdng">LICENSE</h1>
+                            {/* <h1 className="hdng">LICENSE</h1> */}
+                            <Textanimation text="LICENSE" />
                             <p className="decs">Subject to these Terms and Our policies, We grant you a limited, Personal, commercial,
                                 non-exclusive, non-transferable, and revocable license to use Our Services/Products. You may use Our Product(s)
                                 for Your Personal and commercial use including for use in websites, videos, and social media and other media. 
@@ -43,9 +43,6 @@ export default function Licenseterms({user}) {
             </div>
         </div>
     </div>
-
-
-        <Footer />
     </div>
   )
 }
