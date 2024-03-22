@@ -64,15 +64,10 @@ export default function Aboutus() {
                                 </Imageanimation>
                             </div>
                             <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 au-block-2 align-self-center">
-                                <h6 className="eb">About Us</h6>
+                                <h6 className="eb">LET'S TALK CONTENT</h6>
                                 {/* <h1 className="hdng">How WE Are</h1> */}
-                                <Textanimation align={'start'} text="How WE Are" />
-                                <p className="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br /><br/>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <Textanimation align={'start'} text="LET'S TALK CONTENT" />
+                                <p className="decs">We get it. Great ideas for social media posts need the perfect visuals to bring them to life. Generic stock websites fall short in capturing the authenticity and connection social media demands. That's why we created a stock footage platform exclusively for social media, to help you create high-quality content that resonates with your audience in less time.</p>
                             </div>
                         </div>
                     </div>
@@ -82,12 +77,10 @@ export default function Aboutus() {
                     <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                         <div className="row w-100 text-start d-flex justify-content-between ">
                             <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 sta-block-1 align-self-center">
-                                <h6 className="st">Save Time</h6>
+                                <h6 className="st">POWERED BY WOMEN FOR WOMEN</h6>
                                 {/* <h1 className="hdng">Create more posts<br /> in less time</h1> */}
-                                <Textanimation align={'start'} text="Create more posts in less time" />
-                                <p className="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <Textanimation align={'start'} text="POWERED BY WOMEN    FOR WOMEN" />
+                                <p className="decs">We're proud to say that Social Stocks is powered by a team of women who understand the unique struggles female entrepreneurs face. Based in the vibrant city of Hong Kong, our diverse team brings a fresh perspective to the table and is committed to supporting and empowering brands like yours.</p>
                             </div>
                             <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 text-end sta-block-2">
                                 <Imageanimation>
@@ -107,12 +100,10 @@ export default function Aboutus() {
                                 </Imageanimation>
                             </div>
                             <div className="col-xxl-6 col-xl-6 col-lg-6 col-12 eba-block-2 align-self-center">
-                                <h6 className="eb">EXTRA BOOST</h6>
+                                <h6 className="eb">AFFORDABLE CONTENT CREATION</h6>
                                 {/* <h1 className="hdng">Boost conversions, engagement and reach</h1> */}
-                                <Textanimation align={'start'} text="Boost conversions, engagement and reach" />
-                                <p className="decs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <Textanimation align={'start'} text="AFFORDABLE CONTENT CREATION" />
+                                <p className="decs">We understand that hiring a content creation agency can be financially daunting, with prices starting at $500 per video. That's why we made Social Stocks affordable for all brands. With our subscription, you'll have unlimited access to our ENTIRE collection of videos. Plus, we add 100-200 new video uploads every month to keep your content fresh and engaging. No need to break the bank to elevate your content game.</p>
                             </div>
                         </div>
                     </div>

@@ -85,49 +85,50 @@ export default function Pricingpage({user}) {
                     <div className="row w-100 gap-4">
                         <motion.div transition={{delay:0.4 , duration:1, type: "spring", ease: "circIn" , bounce: 0.4 }} initial={{ y:100, opacity:0 }} whileInView={{ y:0, opacity:1 }} viewport={{ once: true }} className="col-xxl-4 col-xl-4 col-lg-4 col-12">
                             <div className="monthly">
-                                <h6 className="sub-hdng">MONTHLY</h6>
+                                <h6 className="sub-hdng">QUARTERLY
+</h6>
 
                                 <div className="price-div">
-                                    <h1 className="price">$ 9.99 <span className="usd-text">USD</span></h1>
-                                    <p className="price-decs">MONTHLY</p>
+                                    <h1 className="price">$ 120 <span className="usd-text">USD</span></h1>
+                                    <p className="price-decs">EVERY 3 MONTHS</p>
                                 </div>
                                 <hr className="divider" />
                                 <div className="benefits-details">
                                     <ul>
-                                        <li>5 daily downloads</li>
-                                        <li>Access to a growing content bank (100+ new trendy videos added every month)
+                                        <li>Unlimited Downloads and Access to a growing content bank (100-200 new trendy videos added every month)</li>
+                                        <li>Use Social Stocks videos and to show off your products or services, for both personal and business use. Remember, reselling the videos on their own is prohibited and illegal.
                                         </li>
+                                        {/* <li>5 daily downloads</li>
                                         <li>5 daily downloads</li>
-                                        <li>5 daily downloads</li>
-                                        <li>5 daily downloads</li>
+                                        <li>5 daily downloads</li> */}
                                     </ul>
                                 </div>
                                 <div className="btn-container">
-                                    <a><button onClick={() => handlepayment('price_1Oor2eA8UKojBEm6j0F3aNqT')} className="select-btn">MEMBER LIMIT REACHED</button></a>
+                                    <a><button onClick={() => handlepayment('price_1Oor2eA8UKojBEm6j0F3aNqT')} className="select-btn">Join Now </button></a>
                                 </div>
                             </div>
                         </motion.div>
                         <motion.div transition={{delay:0.6 , duration:1, type: "spring", ease: "circIn" , bounce: 0.4 }} initial={{ y:100, opacity:0 }} whileInView={{ y:0, opacity:1 }} viewport={{ once: true }} className="col-xxl-4 col-xl-4 col-lg-4 col-12">
                             <div className="monthly">
-                                <h6 className="sub-hdng">QUARTERLY</h6>
+                                <h6 className="sub-hdng">YEARLY</h6>
 
                                 <div className="price-div">
-                                    <h1 className="price">$ 14.99 <span className="usd-text">USD</span></h1>
-                                    <p className="price-decs">SAVE 6 USD</p>
+                                    <h1 className="price">$ 462 <span className="usd-text">USD</span></h1>
+                                    <p className="price-decs">SAVE 42 USD
+</p>
                                 </div>
                                 <hr className="divider" />
                                 <div className="benefits-details">
                                     <ul>
-                                        <li>20 daily downloads</li>
-                                        <li>Access to a growing content bank (100+ new trendy videos added every month)
-                                        </li>
-                                        <li>5 daily downloads</li>
-                                        <li>5 daily downloads</li>
-                                        <li>5 daily downloads</li>
+                                        <li>Unlimited Downloads and Access to a growing content bank (100-200 new trendy videos added every month)</li>
+                                        <li>Use Social Stocks videos and images to show off your products or services, for both personal and business use. Remember, reselling the videos on their own is prohibited and illegal.</li>
+                                        <li>Access to an Additional Exclusive Videos and Images Folder<br/>Limited Number of Members<br/>0 Seats left</li>
+                                        {/* <li>5 daily downloads</li>
+                                        <li>5 daily downloads</li> */}
                                     </ul>
                                 </div>
                                 <div className="btn-container">
-                                    <a><button onClick={() => handlepayment('price_1Oor33A8UKojBEm6E1L1kDED')} className="select-btn">Join Now</button></a>
+                                    <a><button onClick={() => handlepayment('price_1Oor33A8UKojBEm6E1L1kDED')} className="select-btn">MEMBER LIMIT REACHED</button></a>
                                 </div>
                             </div>
                         </motion.div>
@@ -136,18 +137,17 @@ export default function Pricingpage({user}) {
                                 <h6 className="sub-hdng">YEARLY</h6>
 
                                 <div className="price-div">
-                                    <h1 className="price">$ 19.99 <span className="usd-text">USD</span></h1>
+                                    <h1 className="price">$ 462 <span className="usd-text">USD</span></h1>
                                     <p className="price-decs">SAVE 42 USD</p>
                                 </div>
                                 <hr className="divider" />
                                 <div className="benefits-details">
                                     <ul>
-                                        <li>Unlimited Downloads</li>
-                                        <li>Access to a growing content bank (100+ new trendy videos added every month)
-                                        </li>
-                                        <li>5 daily downloads</li>
-                                        <li>5 daily downloads</li>
-                                        <li>5 daily downloads</li>
+                                    <li>Unlimited Downloads and Access to a growing content bank (100-200 new trendy videos added every month)</li>
+                                        <li>Use Social Stocks videos and images to show off your products or services, for both personal and business use. Remember, reselling the videos on their own is prohibited and illegal.</li>
+                                        <li>Access to an Additional Exclusive Videos and Images Folder<br/>Limited Number of Members<br/>0 Seats left</li>
+                                        {/* <li>5 daily downloads</li>
+                                        <li>5 daily downloads</li> */}
                                     </ul>
                                 </div>
                                 <div className="btn-container">

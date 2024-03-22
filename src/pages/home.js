@@ -33,8 +33,7 @@ export default function Home({user}) {
                 <div className="col b-block-1">
                     <motion.img transition={{delay: 1.8 , duration:1 , type: "spring" , ease: "linear" , bounce: 0.6}} initial={{ y:100, opacity:0 }} animate={{ y:0 , opacity:1 }} src="./assets/images/home/banner-logo.png" alt="UGC Stocks" className="b-logo" />
                     <p className="decs">
-                        <Ptaganimation delay={1.8} speed={0.15} text="“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua." />
+                        <Ptaganimation delay={1.8} speed={0.15} text="“User Generated Content for Creators"/>
                     </p>
                 </div>
             </div>
@@ -120,9 +119,7 @@ export default function Home({user}) {
                             <Textanimation align="start" text="in less time"/> */}
                             <Imageanimation>
                             <p className="decs">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Create social media posts without having to spend hours setting up your shot and waiting for the perfect light to come through
                                 {/* <Ptaganimation delay={0.1} speed={0.08} align="start" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." /> */}
@@ -154,9 +151,7 @@ export default function Home({user}) {
                             <Textanimation align="start" text="Boost conversions, engagement and reach" />
                             <Imageanimation>
                             <p className="decs">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            The go-to for social media managers, business owners, content creators, lifestyle brands, designers, coaches and agencies looking to drive conversions with content that looks and feels authentic
                                 {/* <Ptaganimation delay={0.1} speed={0.08} align="start" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." /> */}
@@ -212,15 +207,13 @@ export default function Home({user}) {
                             <h2 className="accordion-header">
                                 <button className="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Lorem Ipsum Dolor Amet, constetur adipiscing?
+                                    Can I customize and edit the videos and images?
                                 </button>
                             </h2>
                             <div id="collapseOne" className="accordion-collapse collapse show"
                                 data-bs-parent="#accordionExample">
-                                <div className="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
+                                <div className="accordion-body">Yep! Adjust the colors, add text, edit, and personalize the videos with Canva, InShot, CapCut, or any editing app you prefer.
+                                We shoot with text placement in mind so you can easily add text without worrying about it looking too busy or out of place.
                                 </div>
                             </div>
                         </motion.div>
@@ -228,15 +221,12 @@ export default function Home({user}) {
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Lorem Ipsum Dolor Amet, constetur adipiscing elit, sed do?
+                                    What are the usage rights?
                                 </button>
                             </h2>
                             <div id="collapseTwo" className="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
-                                <div className="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
+                                <div className="accordion-body">You can fully customize Social Stocks videos: adding logos or text, adjusting color, applying filters, or trimming clips and posting them to your personal or brand social media.<br/> <strong>However, reselling them is illegal and prohibited under our usage license.</strong>
                                 </div>
                             </div>
                         </motion.div>
@@ -244,15 +234,12 @@ export default function Home({user}) {
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Lorem Ipsum Dolor Amet, constetur adipiscing elit, sed do?
+                                    What is the quality of the footage?
                                 </button>
                             </h2>
                             <div id="collapseThree" className="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
-                                <div className="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
+                                <div className="accordion-body">The videos and images on our site are slightly compressed to make your scrolling experience faster and smoother.But we promise: once you click download, you'll receive the original high-quality file straight to your device! 😍
                                 </div>
                             </div>
                         </motion.div>
@@ -260,15 +247,12 @@ export default function Home({user}) {
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Lorem Ipsum Dolor Amet, constetur adipiscing elit, sed do?
+                                    Is there a limit to how many times I can use a video/image?
                                 </button>
                             </h2>
                             <div id="collapseFour" className="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
-                                <div className="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
+                                <div className="accordion-body">Nope! There is no limit to how often you can use a video. You can use the same video multiple times with no additional fees 🥳
                                 </div>
                             </div>
                         </motion.div>
@@ -276,15 +260,12 @@ export default function Home({user}) {
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Lorem Ipsum Dolor Amet, constetur adipiscing elit, sed do?
+                                    What type of stock videos/images can I find in the membership?
                                 </button>
                             </h2>
                             <div id="collapseFive" className="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
-                                <div className="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
+                                <div className="accordion-body">Tons of trendy and aesthetic lifestyle shots captured in natural lighting! Take a look at our Instagram  story highlights for a preview 👀
                                 </div>
                             </div>
                         </motion.div>
@@ -292,15 +273,12 @@ export default function Home({user}) {
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Lorem Ipsum Dolor Amet, constetur adipiscing elit, sed do?
+                                    What can't I do with stock videos and images?
                                 </button>
                             </h2>
                             <div id="collapseSix" className="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
-                                <div className="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
+                                <div className="accordion-body">❌ You can't claim the videos or images as your own work or sell them as your own. Give credit to <a>Social Stock</a> when asked <br/>❌ You must use the videos and images responsibly and not promote wrongdoings or illegal activities.<br/>❌ <strong>You can't resell the videos and images. This is illegal and prohibited under our usage license.</strong><br/>✅ Other than that, you can use the videos and images for any personal or commercial projects! 😍
                                 </div>
                             </div>
                         </motion.div>

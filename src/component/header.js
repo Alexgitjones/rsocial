@@ -14,8 +14,7 @@ export default function Header({user, path}) {
             <div className="container-fluid justify-content-center d-flex flex-column align-items-center">
                 <div className="row w-100 text-center">
                     <div className="col tb-block-1">
-                        <h1 className="top-bar-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor</h1>
+                        <h1 className="top-bar-content">2,573 Aesthetic videos Ready to post to your socials!</h1>
                     </div>
                 </div>
             </div>

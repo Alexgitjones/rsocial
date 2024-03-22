@@ -11,7 +11,7 @@ export default function Joinnow() {
                 <div className="col jn-block-1">
                     <h6 className="sub-hdng">Join Now</h6>
                     {/* <h1 className="hdng">Sign up today and see the difference trendy UGC style content can make for your social media presence</h1> */}
-                    <Textanimation text="Sign up today and see the difference trendy UGC style content can make for your social media presence" />
+                    <Textanimation text="Sign up today and see the difference   trendy UGC style content can make   for your social media presence" />
                     <a href="#"><button className="sujn-btn mt-4">Sign Up</button></a>
                 </div>
                 </Imageanimation>
